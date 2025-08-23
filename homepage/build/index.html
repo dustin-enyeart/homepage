@@ -1,226 +1,213 @@
 <html>
 <!DOCTYPE html>
+
 <head>
+
+    <meta http-equiv="refresh" content="0; url=https://homepage-31a478.gitlab.io/">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WDP1BKWC9"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-7WDP1BKWC9');
+        gtag('config', 'G-7WDP1BKWC9');
     </script>
 
     <meta charset="utf-8">
     <title>Dustin Enyeart</title>
-    <link rel="icon" type="image/png"
-    href="/static/integral.svg">
+    <link rel="icon" type="image/png" href="/static/integral.svg">
 
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 
     <style>
-    .page-header {
-        display: flex; 
-        background-image: url("/static/background-frame.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 3px solid white;
-        justify-content: center; /* align horizontal */
-        align-items: center; /* align vertical */
-    }
-    .header-text {
-        text-align: center;
-    }
-    .profile-photo {
-        width: 10em;
-        height: 10em;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 50%;
-        border: 3px solid white;
-    }
+        .page-header {
+            display: flex;
+            background-image: url("/static/background-frame.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 3px solid white;
+            justify-content: center;
+            /* align horizontal */
+            align-items: center;
+            /* align vertical */
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 10em;
+            height: 10em;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
     </style>
 </head>
 
 
 <body>
 
-
-<div class="icon-link">
-<p>
     
-    <a class="icon-link"
-    href="https://gitlab.com/users/dustin_lee/projects">
-        <img class="icon-link-image"
-        src="/static/gitlab.svg">
-    </a>
-    
-    <!-- <a class="icon-link"
+    <div class="icon-link">
+        <p>
+            
+            <a class="icon-link" href="https://gitlab.com/users/dustin_lee/projects">
+                <img class="icon-link-image" src="/static/gitlab.svg">
+            </a>
+            
+            <!-- <a class="icon-link"
     href="https://github.com/dustin-enyeart">
         <img class="icon-link-image"
         src="/static/github.svg">
     </a> -->
+            
+            <a class="icon-link" href="https://www.linkedin.com/in/dustin-lee-enyeart-6a15582aa/">
+                <img class="icon-link-image" src="/static/linkedin.svg">
+            </a>
+            
+            <button id="resumeButton">
+                <span>
+                    <img class="icon-link-image" src="/static/resume.svg">
+                </span>
+            </button>
+            
+            <button id="emailButton">
+                <span>
+                    <img class="icon-link-image" src="/static/mail.svg">
+                </span>
+            </button>
+            
+        <div id="emailModal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <p>
+                    <span style="font-size:1.2em">
+                        <strong>Email</strong>
+                    </span>
+                    <br>
+                    <button class="copy-button" onclick="copyText('email-text')" data-tooltip="Copied!">
+                        <img class="copy-icon" src="/static/copy.svg">
+                    </button>
+                    <span id="email-text" style="font-family:monospace; font-size:1.2em">
+                        dustin.enyeart@pm.me
+                    </span>
+                </p>
+                <p>
+                    <span style="font-size:1.2em">
+                        <strong>Public Key</strong>
+                    </span>
+                    <span style="font-size:0.8em">
+                        (for optional encrypting)
+                    </span>
+                    <br>
+                    <button class="copy-button" onclick="copyText('key-text')" data-tooltip="Copied!">
+                        <img class="copy-icon" src="/static/copy.svg">
+                    </button>
+                    <span id="key-text" style="font-family:monospace; font-size:1.2em">
+                        685354D9D328D54C49F91BFF90F4A9355545CCA9
+                    </span>
+                </p>
+            </div>
+        </div>
+        
+        <div id="resumeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <p>
+                    <a href="/static/resume-enyeart.pdf">
+                        Resume
+                    </a>
+                </p>
+                <p>
+                    <a href="/static/cv-enyeart.pdf">
+                        CV
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!--  -->
+        </p>
+    </div>
+
+
     
-    <a class="icon-link"
-    href="https://www.linkedin.com/in/dustin-lee-enyeart-6a15582aa/">
-        <img class="icon-link-image"
-        src="/static/linkedin.svg">
-    </a>
-     
-    <button id="resumeButton">
-        <span>
-        <img class="icon-link-image"
-            src="/static/resume.svg">
-        </span>
-    </button>
-    
-    <button id="emailButton">
-        <span>
-        <img class="icon-link-image"
-            src="/static/mail.svg">
-        </span>
-    </button> 
-    
-    <div id="emailModal" class="modal">
-    <div class="modal-content">
-        <span class="close">×</span>
+    <div class="page-header">
+        
         <p>
-            <span style="font-size:1.2em">
-                <strong>Email</strong> 
+            <img class="profile-photo" src="/static/profile.jpeg">
+        </p>
+        
+        <p class="header-text">
+            <span style="font-size: 2em">
+                The Homepage of
             </span>
             <br>
-            <button class="copy-button"
-            onclick="copyText('email-text')"
-            data-tooltip="Copied!">
-                <img class="copy-icon"
-                src="/static/copy.svg">
-            </button>
-            <span id="email-text"
-            style="font-family:monospace; font-size:1.2em">
-                dustin.enyeart@pm.me
+            <span style="font-size: 4em">
+                Dustin Lee Enyeart
             </span>
         </p>
+    </div>
+
+
+    
+    <div class="section">
+        <h2> About 🚀 </h2>
         <p>
-            <span style="font-size:1.2em">
-                <strong>Public Key</strong> 
-            </span>
-            <span style="font-size:0.8em">
-                (for optional encrypting)
-            </span>
-            <br>
-            <button class="copy-button"
-            onclick="copyText('key-text')"
-            data-tooltip="Copied!">
-                    <img class="copy-icon"
-                    src="/static/copy.svg">
-                </button>
-                <span id="key-text" style="font-family:monospace; font-size:1.2em">
-                    685354D9D328D54C49F91BFF90F4A9355545CCA9
-                </span>
-        </p>    
+            Dustin Enyeart is an engineer at Stellar Science.
+            He has a PhD in mathematics from Purdue University with a dissertation on scientific machine learning.
+            He has broad interests across applied mathematics, physics, coding and technical writing.
+        </p>
     </div>
+
+
+    
+    <div class="section">
+        <h2> Books </h2>
+        <p>
+            <a class="footer-link" href="https://leanpub.com/elements">
+                Elements of Mathematics and Physics
+            </a>
+        </p>
     </div>
+
     
-    <div id="resumeModal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <p>
-                <a
-                 href="/static/resume-enyeart.pdf">
-                    Resume
-                </a>
-            </p>
-            <p>
-                <a
-                 href="/static/cv-enyeart.pdf">
-                    CV
-                </a>
-            </p>
-        </div>
-    </div> 
-   
-    <!--  -->
-</p>
-</div>
+    <div class="section">
+        <h2> Papers </h2>
+        <p>
+            <a class="footer-link"
+                href="https://hammer.purdue.edu/articles/thesis/Some_Studies_in_Operator_Learning_for_Solving_Differential_Equations/27936021?file=50903178">
+                Some Studies in Operator Learning for Solving Differential Equations
+            </a>
+            (Thesis)
+        </p>
+        <p>
+            <a class="footer-link" href="https://arxiv.org/abs/2412.04578">
+                Loss Terms and Operator Forms of Koopman Autoencoders
+            </a>
+            (2024)
+        </p>
+        <p>
+            <a class="footer-link" href="https://arxiv.org/abs/2412.06686">
+                Some Best Practices in Operator Learning
+            </a>
+            (2024)
+        </p>
+        <p>
+            <a class="footer-link" href="https://arxiv.org/abs/2412.07811">
+                Adversarial Autoencoders in Operator Learning
+            </a> (2024)
+        </p>
+    </div>
 
 
-
-<div class="page-header">
     
-    <p>
-    <img class="profile-photo"
-        src="/static/profile.jpeg">
-    </p>
-    
-    <p class="header-text"> 
-        <span style="font-size: 2em"> 
-        The Homepage of
-        </span>
-        <br>
-        <span style="font-size: 4em">
-        Dustin Lee Enyeart
-        </span>
-    </p>
-</div>
-
-
-
-<div class="section"> 
-    <h2> About 🚀 </h2>
-    <p>
-        Dustin Enyeart is an engineer at Stellar Science.
-        He has a PhD in mathematics from Purdue University with a dissertation on scientific machine learning. 
-        He has broad interests across applied mathematics, physics, coding and technical writing.
-    </p>
-</div>
-
-
-
-<div class="section"> 
-    <h2> Books </h2>
-    <p>
-        <a class="footer-link"
-        href="https://leanpub.com/elements">
-            Elements of Mathematics and Physics
-        </a>
-    </p>
-</div>
-
-
-<div class="section"> 
-    <h2> Papers </h2>
-    <p>
-        <a class="footer-link"
-        href="https://hammer.purdue.edu/articles/thesis/Some_Studies_in_Operator_Learning_for_Solving_Differential_Equations/27936021?file=50903178">
-            Some Studies in Operator Learning for Solving Differential Equations        
-        </a>
-        (Thesis)
-    </p>
-    <p>
-        <a class="footer-link"
-        href="https://arxiv.org/abs/2412.04578">
-            Loss Terms and Operator Forms of Koopman Autoencoders
-        </a>
-        (2024)
-    </p>
-    <p>
-        <a class="footer-link"
-        href="https://arxiv.org/abs/2412.06686">
-            Some Best Practices in Operator Learning
-        </a>
-        (2024)
-    </p>
-    <p>
-        <a class="footer-link"
-        href="https://arxiv.org/abs/2412.07811">
-            Adversarial Autoencoders in Operator Learning
-        </a> (2024)
-    </p>
-</div>
-
-
-
-<!-- <div class="footer">
+    <!-- <div class="footer">
 <hr>
     <p> 
         <a class="footer-link" href="/about/">
@@ -230,10 +217,9 @@
 </div> -->
 
 
-<script src="static/scripts.js"></script>
+    <script src="static/scripts.js"></script>
 
 
 </body>
 
 </html>
-
