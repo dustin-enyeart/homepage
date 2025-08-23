@@ -1,39 +1,42 @@
 body {
-        display: flex; 
-        flex-direction: column;
-        background-color: #141414;
-        background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
-        max-width: 50em;
-        padding: 10px;
-        margin: 0 auto;
-        color: white;
-    } 
+    display: flex;
+    flex-direction: column;
+    background-color: #f1ebeb;
+    color: black;
+    max-width: 50em;
+    padding: 10px;
+    margin: 0 auto;
+}
 
 
 .icon-links {
     width: 100%;
     text-decoration: none;
 }
+
 .icon-link {
     width: 100%;
     text-decoration: none;
-    color: black; 
+    color: black;
 }
+
 .icon-link-image {
     width: 2em;
     height: 2em;
     margin-right: 1em;
     text-decoration: none;
-    color: black; 
+    color: black;
 }
+
 .icon-link-image:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -48,9 +51,11 @@ button {
     margin: 0;
     transition: none;
 }
+
 button span {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
+
 .modal {
     display: none;
     position: absolute;
@@ -59,6 +64,7 @@ button span {
     margin-left: -20em;
     top: -3%;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -66,12 +72,14 @@ button span {
     border: 1px solid #888;
     width: 80%;
 }
+
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
     color: black;
@@ -83,9 +91,11 @@ button span {
     width: 1em;
     height: 1em;
 }
+
 .copy-button:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
+
 button[data-tooltip]:hover:after {
     content: attr(data-tooltip);
     position: absolute;
@@ -101,17 +111,24 @@ button[data-tooltip]:hover:after {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
+
 button[data-tooltip]:active:after {
     opacity: 1;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0px;
 }
+
 .section {
     color: white;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     /* text-align: center; */
 }
